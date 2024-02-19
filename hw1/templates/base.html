@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>
+        {% block title %}
+        Сайт магазина одежды
+        {% endblock %}
+    </title>
+</head>
+<body style="
+    background-image: url('/static/images/main_logo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    ">
+
+<div class="container_main_page">
+    <ul>
+        <li class="nav-item"><a href="/main/" class="nav-link">Главная</a></li>
+        <li class="nav-item"><a href="/clothes/" class="nav-link">Одежда</a></li>
+        <li class="nav-item"><a href="/footwear/" class="nav-link">Обувь</a></li>
+    </ul>
+
+    {% block content %}
+    Страница контента...
+    {% endblock %}
+
+</div>
+</body>
+</html>

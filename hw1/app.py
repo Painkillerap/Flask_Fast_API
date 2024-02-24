@@ -9,6 +9,7 @@ def main_page():
     context = {'title': 'Интернет-магазин: Главная'}
     return render_template('main.html', **context)
 
+
 @app.route('/clothes/')
 def clothes_page():
     context = {'title': 'Интернет-магазин: Одежда'}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - {{ title }} {% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Главная</h1>
+        <a href="{{ url_for('page_2') }}">Нажми на меня ! (задача 1)</a><br>
+        <a href="{{ url_for('load_image') }}">Загрузка изображения (задача 2)</a><br>
+        <a href="{{ url_for('auth') }}">Авторизация (задача 3)</a><br>
+        <a href="{{ url_for('send_text') }}">Отправка текста (задача 4)</a><br>
+        <a href="{{ url_for('calc') }}">Калькулятор (задача 5)</a><br>
+        <a href="{{ url_for('name_age') }}">Знакомство с пользователем - имя и возраст (задача 6)</a><br>
+        <a href="{{ url_for('name_email') }}">Знакомство с пользователем - имя и email (задача 9)</a><br>
+    </div>
+{% endblock %}

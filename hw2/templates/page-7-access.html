@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - {{ title }} {% endblock %}
+
+{% block content %}
+    <div>
+        <h3>
+            ДОСТУП ОТКРЫТ !!!<br>
+            Добро пожаловать, {{ name }}.<br>
+            Вам {{ age }} лет, и у вас есть интересные возможности!<br>
+        </h3>
+
+        <br>
+        <a href="{{ url_for('page_main') }}">Вернутся на главную</a><br>
+    </div>
+{% endblock %}

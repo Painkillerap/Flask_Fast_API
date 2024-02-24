@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - {{ title }} {% endblock %}
+
+{% block content %}
+    <div>
+        <h3>
+            Добро пожаловать, {{ name }}.<br>
+            Ваша электронная почта: {{ email }} - сохранена<br>
+        </h3>
+
+        <br>
+        <a href="{{ url_for('logout') }}">Выйти</a><br>
+    </div>
+{% endblock %}

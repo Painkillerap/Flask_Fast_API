@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - {{ title }} {% endblock %}
+
+{% block content %}
+    <div>
+        <h1>ОТПРАВКА ТЕКСТА (Задача 4 / page-5)</h1><br>
+
+        <form action="{{ url_for('send_text') }}" method="post">
+            <input type="text" name="text" placeholder="Введите текст">
+            <input type="submit" value="Отправить">
+        </form>
+        <br>
+        <a href="{{ url_for('page_main') }}">Вернутся на главную</a><br>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<hr color="#ffe500">
+
+{% endblock %}
+
+{% block enter_1 %}
+    {% if autorization %}
+        <p>
+            Привет, {{ autorization }}!<br>
+            <a href="{{ url_for('cabinet') }}">Перейти в личный кабинет</a>
+        </p>
+    {% else %}
+        <p>
+            Вы не авторизованы!<br>
+            <a href="{{ url_for('login') }}">Перейти на страницу входа</a>
+        </p>
+    {% endif %}    
+{% endblock %}

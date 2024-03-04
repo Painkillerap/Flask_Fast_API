@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}
+        Урок № 5
+        {% endblock %}
+    </title>
+    <style>
+            .gradient_head {
+             background: #cfcbae;
+             background: linear-gradient(to top, #fefcea, #cfcbae);
+             color: #7d7861;
+             width:100%;
+             border-radius:10px;
+            }
+            .gradient_main {
+             background: #e0e0de;
+             background: linear-gradient(to bottom left, #fefcea, #e0e0de);
+             color: #7d7861;
+             width:80%;
+             border-radius:10px;
+            }
+            .gradient_menu {
+             background: #e0e0de;
+             background: linear-gradient(to top right, #fefcea, #e0e0de);
+             color: #7d7861;
+             text-align: left;
+             width:20%;
+             border-radius:10px;
+            }
+            .gradient_adw {
+             background: #cfcbae;
+             background: linear-gradient(to left, #fefcea, #cfcbae);
+             color: #ffd500;
+             width:20%;
+             border-radius:10px;
+            }
+            .gradient_footer {
+             background: #cfcbae;
+             background: linear-gradient(to bottom, #fefcea, #cfcbae);
+             color: #0a3496;
+             width:100%;
+             border-radius:10px;
+            }
+
+    </style>
+</head>
+<body link="#947b00" vlink="d1b00a" alink="d1b00a">
+<table border="1" align="center" rules="rows" style="width:100%;">
+    <tr>
+        <td>
+            <table border="1" background="images/168.png" class="gradient_head" cellpadding="10">
+                <tr>
+                    <th style="background-size: cover">
+                        <h1>Семинар №5</h1>
+                    </th>
+                </tr>
+            </table>
+            <table border="1" bgcolor="#e6e6fa" cellpadding="10" width=100%>
+                <tr>
+                    <td rowspan="2" class="gradient_main" valign="top">
+
+                        {% block content %}
+                        <h2>Содержимое страницы</h2>
+                        <hr color="#ffe500">
+                        {% endblock %}
+
+                        {% block menu %}
+                        <hr color="#ffe500">
+                        {% endblock %}
+                    </td>
+                    <td class="gradient_menu">
+                        {% block enter_1 %}
+                        <a href="{{ url_for('get_users') }}">Здесь можно вернуться на главную страницу</a>
+                        {% endblock %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gradient_menu">
+                        {% block enter_2 %}
+                        <hr color="#ffe500">
+                        {% endblock %}
+                    </td>
+                </tr>
+            </table>
+            <table border="1" class="gradient_footer" height="100" cellpadding="10">
+                <tr>
+                    <th>
+                        <h2>Footer</h2>
+                    </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

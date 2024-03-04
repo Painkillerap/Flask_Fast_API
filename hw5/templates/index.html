@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<div align="center">
+    <table border="2" width="70%" cellpadding="5">
+        <tr align="center">
+            <td>ID</td>
+            <td>Имя</td>
+            <td>E-mail</td>
+            <td>Удаление</td>
+        </tr>
+        {% for user in users %}
+        <tr align="center">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <form method="post">
+                    <input type="hidden" name="user_id" id='delete' value = "{{ user.id }}">
+                    <button type = "submit">Удалить</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+<hr color="#ffe500">
+<a href="{{ url_for('add_user') }}" >
+    <button type = "submit">
+        Добавить пользователя
+    </button>
+</a>
+<hr color="#ffe500">
+</div>
+{% endblock %}

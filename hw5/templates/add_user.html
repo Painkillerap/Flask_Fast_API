@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<div align="center">
+        <h2>Добавляем пользователя</h2>
+        <form action="/create_user" method="post">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required>
+            <hr color="#ffe500">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+            <hr color="#ffe500">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <hr color="#ffe500">
+            <input type="submit" value="Создать и добавить">
+        </form>
+<hr color="#ffe500">
+</div>
+{% endblock %}
